@@ -1,0 +1,23 @@
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/styles.css')
+    body
+        h1 Custom Objects Table
+        
+        // Add a link to the form to add new objects
+        a(href='/update-cobj') Add to this table
+        
+        table
+            thead
+                tr
+                    th Art
+                    th Age
+                    th Kilos
+            tbody
+                // Loop through the customObjects array passed from the Express route
+                each customObject in data
+                    tr
+                        td= customObject.properties.pet_art
+                        td= customObject.properties.alder
+                        td= customObject.properties.kilo
