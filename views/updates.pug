@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/styles2.css')
+    body
+        h1 Update Custom Object
+        
+        // Form for submitting new custom object data
+        form(action='/update-cobj', method='POST')
+            div
+                label(for='custom_property_1') Name
+                input(type='text', name='pet_art', required=true)
+            div
+                label(for='custom_property_2') Age
+                input(type='text', name='alder', required=true)
+            div
+                label(for='custom_property_3') Kilos
+                input(type='text', name='kilo', required=true)
+            div
+                button(type='submit') Submit
+                
+        a(href='/') Back to Homepage
